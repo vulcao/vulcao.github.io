@@ -96,6 +96,7 @@ const Utils = {
             let linha = `
             <td>${Utils.formatData(lancamento.data)}</td>
             <td>${lancamento.descricao}</td>
+            <td>${lancamento.tipo}</td>
             <td colspan="3">${Utils.formatCurrency(lancamento.valor)}</td>
             `
             let tr = document.createElement('tr')
