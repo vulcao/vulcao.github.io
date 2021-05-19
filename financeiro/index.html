@@ -21,44 +21,46 @@
 </head>
 <body>
     <a id="downloadAnchorElem" style="display:none"></a>
-    <table>
-        <thead>
-            <tr>
-                <th colspan="2">
-                    <input id="load" type="file" />
-                    <button id="download">Download</button>
-                </th>
-                <th>Saldo</th>
-                <th id="saldo"></th>
-                <th><button id="novo">Novo</button></th>
-            </tr>
-            <tr class="novoLancamento">
-                <th>Data</th>
-                <th>Descrição</th>
-                <th>Tipo</th>
-                <th colspan="2">Valor</th>
-            </tr>
-            <tr class="novoLancamento">
-                <th><input type="date" id="fData"></th>
-                <th><input type="text" id="fDesc"></th>
-                <th>
-                    Fixa <input type="radio" name="fTipo" id="fTipoF" value="F">
-                    Variável <input type="radio" name="fTipo" id="fTipoV" value="V">
-                </th>
-                <th><input type="text" id="fValor"></th>
-                <th><button>Gravar</button></th>
-            </tr>
-            <tr>
-                <th>Data</th>
-                <th>Descrição</th>
-                <th>Tipo</th>
-                <th colspan="2">Valor</th>
-            </tr>
-        </thead>
-        <tbody>
+    <div style="overflow-x:auto;">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">
+                        <input id="load" type="file" />
+                        <button id="download">Download</button>
+                    </th>
+                    <th>Saldo</th>
+                    <th id="saldo"></th>
+                    <th><button id="novo">Novo</button></th>
+                </tr>
+                <tr class="novoLancamento">
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Tipo</th>
+                    <th colspan="2">Valor</th>
+                </tr>
+                <tr class="novoLancamento">
+                    <th><input type="date" id="fData"></th>
+                    <th><input type="text" id="fDesc"></th>
+                    <th>
+                        Fixa <input type="radio" name="fTipo" id="fTipoF" value="F">
+                        Variável <input type="radio" name="fTipo" id="fTipoV" value="V">
+                    </th>
+                    <th><input type="text" id="fValor"></th>
+                    <th><button>Gravar</button></th>
+                </tr>
+                <tr>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Tipo</th>
+                    <th colspan="2">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
