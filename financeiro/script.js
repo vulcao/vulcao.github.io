@@ -23,20 +23,41 @@ const Utils = {
         const currency = signal + value
         return currency
     },
+    showHide(id,acao,parent=null) {
+        let elm = ''
+        if (parent == null) {
+            elm = document.querySelector(`#${id}`)
+        } else {
+            elm = id.closest('.dinamico')
+        }
+        console.log(elm)
+        elm.style.display = acao
+    },
     showHideFormulario(acao) {
-        document.querySelectorAll('.novoLancamento input').forEach(elm=>{
+        document.querySelectorAll('#novoLancamento input').forEach(elm=>{
             if (elm.type != 'radio'){
                 elm.value = ''
             } else {
                 elm.checked = false;
             }
         })
-        document.querySelector('.novoLancamento').style.display = acao
+        document.querySelector('#novoLancamento').style.display = acao
     },
     bindaEventos() {
-        let btnNovo = document.querySelector('button#novo')
+        let btnNovo = document.querySelector('#btnNovo')
         btnNovo.addEventListener('click',Utils.mostraFormulario)
-        let btnGravar = document.querySelector('.novoLancamento button')
+
+        let btnManutencao = document.querySelector('#btnManutencao')
+        btnManutencao.addEventListener('click',Utils.mostraManutencao)
+
+        let btnFechar = document.querySelectorAll('.fechar')
+        btnFechar.forEach(elm=>{
+            elm.addEventListener('click',()=>{
+                Utils.showHide(elm,'none',true)
+            })
+        })
+
+        let btnGravar = document.querySelector('#novoLancamento button')
         btnGravar.addEventListener('click',Utils.gravaFormulario)
 
         document.getElementById('load').addEventListener('change', Utils.loadJson)
@@ -45,10 +66,13 @@ const Utils = {
     mostraFormulario() {
         Utils.showHideFormulario('')
     },
+    mostraManutencao() {
+        Utils.showHide('manutencao','inline-flex')
+    },
     gravaFormulario() {
         
         let novoLancamento = {}
-        document.querySelectorAll('.novoLancamento input').forEach(elm=>{
+        document.querySelectorAll('#novoLancamento input').forEach(elm=>{
             if (elm.type != 'radio'){
                 if(elm.id == 'fData'){
                     novoLancamento.data = new Date(elm.value+' 00:00:00')
@@ -133,7 +157,8 @@ const Utils = {
 // APLICAÇÃO
 let App = {
     init() {
-        Utils.showHideFormulario('none')
+        Utils.showHide('manutencao','none')
+        Utils.showHide('novoLancamento','none')
         Utils.bindaEventos()
         Utils.printaLancamentos()
     },
