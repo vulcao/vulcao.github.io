@@ -31,14 +31,12 @@ const Utils = {
                 elm.checked = false;
             }
         })
-        document.querySelectorAll('.novoLancamento').forEach(elm=>{
-            elm.style.display = acao
-        })
+        document.querySelector('.novoLancamento').style.display = acao
     },
     bindaEventos() {
-        let btnNovo = document.querySelector('thead button#novo')
+        let btnNovo = document.querySelector('button#novo')
         btnNovo.addEventListener('click',Utils.mostraFormulario)
-        let btnGravar = document.querySelector('thead .novoLancamento button')
+        let btnGravar = document.querySelector('.novoLancamento button')
         btnGravar.addEventListener('click',Utils.gravaFormulario)
 
         document.getElementById('load').addEventListener('change', Utils.loadJson)
@@ -91,13 +89,10 @@ const Utils = {
         let saldo = 0
         Lancamentos.all.sort((a, b) => (a.data < b.data) ? 1 : -1)
         Lancamentos.all.forEach((lancamento,index) => {
-            console.log(lancamento.data)
-            console.log(Utils.formatData(lancamento.data))
             let linha = `
             <td>${Utils.formatData(lancamento.data)}</td>
-            <td>${lancamento.descricao}</td>
-            <td>${lancamento.tipo}</td>
-            <td colspan="3">${Utils.formatCurrency(lancamento.valor)}</td>
+            <td>${lancamento.tipo}|${lancamento.descricao}</td>
+            <td>${Utils.formatCurrency(lancamento.valor)}</td>
             `
             let tr = document.createElement('tr')
             tr.innerHTML = linha
