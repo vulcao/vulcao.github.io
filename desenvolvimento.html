@@ -172,37 +172,53 @@ export NODE_OPTIONS=--openssl-legacy-provider (fonte: https://www.bewoksatukoson
             <h2>GitHub</h2>
             <h3><code>.grid</code> enable a minimal grid system with auto-layout columns.</h3>
           </hgroup>
-          <article aria-label="Grid example">
-            <div class="grid">
-              <div>1</div>
-              <div>2</div>
-              <div>3</div>
-              <div>4</div>
-            </div>
-            <footer class="code">
-              asdasasdas
-            </footer>
-          </article>
-          <p>Columns intentionally collapses below large devices <code>(<u>992px</u>)</code></p>
-          <p>To go further, discover how to <a href="https://picocss.com/examples/bootstrap-grid/">merge Pico with the Bootstrap grid system</a>.</p>
-          <details>
-            <summary>
-              <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="16" x2="12" y2="12"></line>
-                <line x1="12" y1="8" x2="12.01" y2="8"></line>
-              </svg>
-              &nbsp;More about grids
-            </summary>
-            <p>As Pico focuses on native HTML elements, we kept this grid system very minimalist.</p>
-            <p>A complete grid system in flexbox, with all the ordering, offsetting and, breakpoints utilities, can be heavier than the total size of the Pico library. Not really in the Pico spirit.</p>
-            <p>If you need a quick way to prototyping or build a complex layout, you can look at <strong>Flexbox grid layouts</strong>. For example, <a href="https://getbootstrap.com/docs/4.2/getting-started/contents/">Bootstrap Grid System only</a> or <a href="http://flexboxgrid.com/">Flexbox Grid</a>.</p>
-            <p>If you need a light and custom grid, you can look at <strong>CSS Grid Generators</strong>. For example, <a href="https://cssgrid-generator.netlify.com/">CSS Grid Generator</a>, <a href="http://grid.layoutit.com/">Layoutit!</a> or <a href="https://griddy.io/">Griddy</a>.</p>
-            <p>Alternatively, you can <a href="https://learncssgrid.com/">learn about CSS Grid</a>.</p>
-          </details>
+          <p>Comandos básicos <code>git clone git@github.com:vulcao/vulcao.github.io.git</code></p>
+          <p>Se o repositório pedir senha, use a SSH key cadastrada no GitHub</p>
+          <p>Configuração do ambiente no Linux <a href="https://dev.to/womakerscode/instalando-configurando-e-inicializando-o-git-no-linux-2m96">tem aqui </a>.</p>
+          <code>
+            <pre>
+            Verifique se a instalação foi feita corretamente digitando:
+            $ git --version
+            
+            configurações: 
+
+            $ git config --global user.name seu_nome_aqui
+
+            $ git config --global user.email seu@email.com
+
+            Para verificar as suas configurações:
+
+            $ git config --list
+          </pre>
+          </code>
         </section><!-- ./ Docs: Grid -->
 
+        <!-- Docs: Grid -->
+        <section id="tricks">
+          <hgroup>
+            <h2>Triks and Tips</h2>
+            <h3><code>.grid</code> enable a minimal grid system with auto-layout columns.</h3>
+          </hgroup>
+          <p><a href="https://rafaelmoraes.github.io/gerar-chave-ssh-no-linux" target="_blank" rel="noopener noreferrer">Gerar chave SSH no linux</a></p>
+          <code>
+            <pre>
+              sudo dnf install -y openssh
 
+              ssh-keygen -t rsa -b 4096 -C "seu@email.com"
+
+              Enter file in which the key is ($HOME/.ssh/id_rsa):
+
+              Como você já deve ter observado essas chaves são arquivos de texto
+              e podem ser visualizados simplesmente com:
+
+              # pública
+              cat ~/.ssh/id_rsa.pub
+
+              # privada
+              cat ~/.ssh/id_rsa
+          </pre>
+          </code>
+        </section><!-- ./ Docs: Grid -->
 
 
           <!-- Footer -->
