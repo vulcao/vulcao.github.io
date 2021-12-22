@@ -1,8 +1,12 @@
 {
-    "email": "vulcao@gmail.com",
-    "senha": "teste"
-},
-{
-    "email": "teste@gmail.com",
-    "senha": "teste"
+   "login":[
+      {
+         "email":"vulcao@gmail.com",
+         "senha":"teste"
+      },
+      {
+         "email":"teste@gmail.com",
+         "senha":"teste"
+      }
+   ]
 }
