@@ -1,0 +1,54 @@
+Coisas a fazer por sessão:
+
+    # GERAL
+OK  04  > ordenar as sessões, conforme o Menu
+OK  05  > separar o conteudo das sessões em arquivos independentes
+OK  06  > aplicar JS (w3schools) para fazer o include dinâmico das sessões
+07  > planejar navegação para fora da SPA
+
+    # Home
+OK  > corrigir/remover a imagem
+
+    # Desenvolvimento
+02  > organizar as linguagens de programação
+        > quais? (conferir no curriculo)
+            PHP
+            Java
+            C#
+            Javascript
+
+            SQL
+            MySQL
+            PostgreSQLScrum
+            Microsoft SQL Server
+            ASP
+
+            XML
+            AJAX
+            JQuery
+            DHTML
+
+            HTML
+            CSS
+            Visual Studio
+            VS Code
+        > textos para elas
+        > icones por ultimo, antonio!
+
+08  > planejar as páginas de dicas de cada linguagem
+
+    # Rock
+    > bolar esse conteúdo e a apresentação dele
+
+    # Gibis
+03  > organizar os destaques (texto principalmente)
+09  > planejar as páginas internas
+
+    # LEGO
+    > bolar esse conteúdo e a apresentação dele
+
+    # Contato
+OK  01  > arrumar os textos de cada item e por os links
+
+    # Rodapé
+    > verificar esses links de cookies, help e FQAs (deixo, tiro, que porra é essa... não faz nada hoje)
