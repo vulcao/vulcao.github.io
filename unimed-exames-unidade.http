@@ -1,0 +1,79 @@
+@url = services.unimedbelem.com.br/rest/v1
+
+
+
+### EXAMES LISTAR GET
+GET https://{{url}}/exame/lista/?token=876c9e530d7d449950a13eb53c64f8e9&baseApi=VGFzeQ==&origem=8&beneficiario=0880000002754199&mesano=02/2022&dia=undefined/02/2022&_=1645202736793
+
+
+### EXAMES LISTAR POST JSON
+GET https://{{url}}/exame/lista/
+Content-Type: application/json
+
+{
+    "token": "876c9e530d7d449950a13eb53c64f8e9",
+    "baseApi": "VGFzeQ==",
+    "origem": "8",
+    "beneficiario": "0880000002754199",
+    "mesano": "02/2022",
+    "dia": "undefined/02/2022"
+}
+
+### NOVO POST FORM DATA
+POST https://{{url}}/exame/lista/
+Content-Type: multipart/form-data; charset=utf-8; boundary="my boundary"
+
+--my boundary
+Content-Disposition: form-data; name="token"
+
+876c9e530d7d449950a13eb53c64f8e9v
+--my boundary
+Content-Disposition: form-data; name="baseApi"
+
+VGFzeQ==
+--my boundary
+Content-Disposition: form-data; name="beneficiario"
+
+0880000002754199
+--my boundary--
+
+
+####################################################
+
+
+### Lista Unidades
+GET https://repositorio.unimedbelem.com.br/rest/v1/examesunidade/?token=876c9e530d7d449950a13eb53c64f8e9&baseapi=VGFzeQ==&origem=8&beneficiario=0880000002754199&mesano=02/2022&dia=undefined/02/2022&_=1645208151346
+
+### NOVO GET Lista Unidades
+GET https://{{url}}/exame/unidade/?token=876c9e530d7d449950a13eb53c64f8e9&baseApi=VGFzeQ==&origem=8&beneficiario=0880000002754199&mesano=02/2022&dia=undefined/02/2022&_=1645208151346
+
+### NOVO POST JSON
+POST https://{{url}}/exame/unidade/
+Content-Type: application/json
+
+{
+    "token": "876c9e530d7d449950a13eb53c64f8e9",
+    "baseApi": "VGFzeQ==",
+    "origem": 8,
+    "beneficiario": "0880000002754199",
+    "mesano": "02/2022",
+    "dia": "undefined/02/2022"
+}
+
+### NOVO POST FORM DATA
+POST https://{{url}}/exame/unidade/
+Content-Type: multipart/form-data; charset=utf-8; boundary="my boundary"
+
+--my boundary
+Content-Disposition: form-data; name="token"
+
+876c9e530d7d449950a13eb53c64f8e9v
+--my boundary
+Content-Disposition: form-data; name="baseApi"
+
+VGFzeQ==
+--my boundary
+Content-Disposition: form-data; name="beneficiario"
+
+0880000002754199
+--my boundary--

@@ -28,7 +28,7 @@ c29saWNpdGFjYW89Nzk4MTc1NTEmZ3VpYT04MDAyMDM0MCZhY2FvPWF0ZW5kaW1lbnRv
 --my boundary--
 
 ###
-POST http://services.unimedbelem.com.br:8080/pacsroutes/getexam
+POST https://services.unimedbelem.com.br:8080/pacsroutes/getexam
 Content-Type: application/json
 
 {
